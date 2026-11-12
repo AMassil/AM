@@ -168,7 +168,7 @@ I would rather have a protocol that explicitly indicates where information is mi
 
 The vocabulary of operations should also be extensible. A chromatography procedure, a cell culture workflow and an antibody conjugation experiment have different requirements. The software needs to support increasingly specialized operations without making the basic protocol editor unnecessarily complicated.
 
-## Making automation reusable
+## Automating Automation
 
 Laboratory automation often requires developing a dedicated solution for each experimental workflow. Even when the underlying operations are familiar, connecting the calculations, experimental conditions and instruments can take months of programming.
 
@@ -226,7 +226,6 @@ This separation makes it possible to use the same experimental method under diff
 
 The objects are stored in structured, readable files, mainly JSON. Their identities, relationships and scientific parameters remain accessible outside the graphical interface, which also makes them easier for other software to process.
 
-### How the pieces fit together
 
 ```mermaid
 flowchart TD
