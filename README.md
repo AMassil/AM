@@ -8,10 +8,6 @@ Design, characterize and develop biological systems.
 
 > The main window showing the home, the formulation builder, the graph of linked objects and the AI agent.
 
-> **About this repository**
->
-> This repository presents AM and the ideas behind it. The source code is not currently public. AM is a research prototype that runs locally and is still under active development. It has not yet been validated for regulated (GxP) use.
-
 AM is a software project I've been working on to bring the different parts of experimental biotechnology into a single workspace. It takes inspiration from integrated development environments used in programming, where files, tools, dependencies and execution are accessible from the same place. AM stands for Assembly of Methods. The name reflects the basic idea that scientific methods, resources, calculations and instrument adapters should be composable, instead of every new workflow being rebuilt as a separate software project
 
 In AM, biological entities, laboratory resources, protocols, experiments, instruments and results are represented as structured objects that can reference one another. A protocol can be used to calculate an experimental preparation, check whether its operations are feasible and generate instructions for a technician or a compatible instrument. An AI agent can help create and modify these objects, while calculations and technical checks are handled by deterministic software.
@@ -44,25 +40,25 @@ AM grew out of that experience, and my ambition is to address many of the proble
 
 ## What AI can and cannot do for biology
 
-There has been a great deal of progress in applying artificial intelligence to the life sciences. Models can predict protein structures, help identify potential drug candidates and explore molecular spaces that would be impractical to investigate manually.
+It is difficult to ignore the current enthusiasm for artificial intelligence in the life sciences. Every week, new publications announce molecules designed by machine learning, predicted protein structures or potential drug candidates identified through the analysis of enormous amounts of scientific literature.
 
-I find these developments exciting, although I sometimes wonder whether we are paying enough attention to what happens after a model produces a promising result.
+These developments are interesting, but I keep coming back to a question that seems to receive much less attention. **What do we actually do with all this new knowledge?**
 
-Biomedical research depends on experimental evidence. A predicted structure or a newly designed molecule may provide a useful starting point, but determining its actual biological properties requires experiments. Developing a therapeutic candidate also involves extensive preclinical work, clinical trials and validation, with many candidates failing along the way.
+Biomedical research is fundamentally empirical. A promising prediction remains a hypothesis until it has been tested experimentally. Identifying a molecule does not demonstrate that it can treat a disease, and even candidates that perform well in preclinical studies frequently fail during clinical development.
 
-Computational methods can generate hypotheses at a rate that experimental laboratories cannot easily match. A model may suggest thousands of candidates in a short period, while testing even a small fraction of them can require considerable time, equipment and material.
+Computational methods can now generate molecular candidates and hypotheses at a scale that laboratories cannot realistically evaluate. A model might propose thousands of compounds in an afternoon, while testing them requires physical materials, equipment, biological systems and time. As computational generation becomes cheaper, experimental validation becomes an increasingly important bottleneck.
 
-This creates an imbalance between the speed at which new ideas can be generated and the speed at which they can be evaluated.
+This is why I am skeptical of the idea that AI will transform medicine simply by generating new molecules, in the same way that image-generation models have transformed digital content creation. An image can be generated and inspected almost immediately. Evaluating a molecule's biological activity, toxicity or therapeutic potential is an entirely different problem. Our understanding of living systems remains incomplete, and increasing computational power does not eliminate the need to confront predictions with experimental evidence.
 
-AI has obvious uses in molecular design and prediction, and I expect those capabilities to continue improving. I am equally interested in what it could contribute to the experimental work that follows.
+Protein structure prediction has undoubtedly been a major scientific achievement, and AI already has valuable applications throughout biology. But predicting a protein's structure is not equivalent to understanding its behavior in a living organism. I also think the attention given to AI-designed drug candidates remains disproportionate to the clinical evidence available so far.
 
-For example, an AI system could help researchers design experiments, identify relevant variables, prepare experimental conditions, interpret measurements and plan subsequent studies. These activities already involve large amounts of information, repetitive calculations and decisions that depend on previous results.
+I sometimes wonder whether we are approaching the problem from the wrong direction. Rather than concentrating so much effort on making AI produce more biological predictions, **why not make experimental research itself easier for AI to work with?**
 
-Design of experiments is particularly interesting in this context. By varying selected factors systematically and measuring their effects, researchers can build empirical models of their own biological systems. An AI agent could help construct these designs and interpret the resulting data, provided that the conditions and measurements are recorded in a form it can reliably understand.
+There is already an enormous amount of scientific knowledge, laboratory equipment, analytical software and experimental data. Yet much of this remains difficult to access, interpret and combine, even for the researchers who produced it.
 
-That last requirement matters. Experimental data lose much of their usefulness when their context is missing. A measured value becomes difficult to interpret if the associated sample, treatment history, units or experimental conditions are unclear. Negative results are also frequently left out of publications or poorly documented, despite being useful when comparing hypotheses or training models.
+An AI system that could help design experiments, calculate preparations, organize their execution and interpret the resulting measurements would address a different part of the research process. It could also help researchers make better use of existing knowledge instead of continuously generating new hypotheses that still need to be tested.
 
-I think improving the way experiments are represented and recorded could make existing scientific data considerably more useful, both to researchers and to future AI systems.
+This is the direction that interests me most. I want to explore how the structure of experimental work could be made more accessible, reproducible and manipulable by AI, while preserving the empirical approach on which biological research depends.
 
 ## What programming got right
 
